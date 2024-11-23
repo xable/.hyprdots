@@ -21,6 +21,10 @@ if [ -d ~/.config/hypr]; then
     rm -rf ~/.config/hypr
 fi
 
+if [ -d ~/.config/kitty]; then
+    rm -rf ~/.config/kitty
+fi
+
 # Define list of folders to skip
 skip_folders=("etc")
 
