@@ -1,0 +1,72 @@
+#!/bin/bash
+
+## BEFORE RUNNING THIS SCRIPT
+## initalise as root the following
+## iptables -N TCP
+## iptables -N UDP
+## also enable and start the iptables.service
+## don't forget to chmod this script
+
+# Set default policy for FORWARD chain to DROP
+iptables -P FORWARD DROP
+
+# Set default policy for OUTPUT chain to ACCEPT
+iptables -P OUTPUT ACCEPT
+
+# Set default policy for INPUT chain to DROP
+iptables -P INPUT DROP
+
+# Allow established connections
+iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+
+# Allow loopback interface
+iptables -A INPUT -i lo -j ACCEPT
+
+# Drop invalid packets
+iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+
+# Allow ICMP echo requests (ping)
+iptables -A INPUT -p icmp --icmp-type 8 -m conntrack --ctstate NEW -j ACCEPT
+
+# Accept new UDP connections
+iptables -A INPUT -p udp -m conntrack --ctstate NEW -j UDP
+
+# Accept new TCP SYN packets
+iptables -A INPUT -p tcp --syn -m conntrack --ctstate NEW -j TCP
+
+# Reject all other UDP packets with ICMP port unreachable
+iptables -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
+
+# Reject all other TCP packets with TCP reset
+iptables -A INPUT -p tcp -j REJECT --reject-with tcp-reset
+
+# Reject all other packets with ICMP protocol unreachable
+iptables -A INPUT -j REJECT --reject-with icmp-proto-unreachable
+
+# Enable reverse path filtering to prevent spoofed packets
+iptables -t raw -I PREROUTING -m rpfilter --invert -j DROP
+
+# Reject repeated TCP connection attempts within 60 seconds
+iptables -I TCP -p tcp -m recent --update --seconds 60 --name TCP-PORTSCAN -j REJECT --reject-with tcp-reset
+
+# Remove generic TCP reject rule
+iptables -D INPUT -p tcp -j REJECT --reject-with tcp-reset
+
+# Track and reject new TCP connections from recent scans
+iptables -A INPUT -p tcp -m recent --set --name TCP-PORTSCAN -j REJECT --reject-with tcp-reset
+
+# Reject repeated UDP connection attempts within 60 seconds
+iptables -I UDP -p udp -m recent --update --seconds 60 --name UDP-PORTSCAN -j REJECT --reject-with icmp-port-unreachable
+
+# Remove generic UDP reject rule
+iptables -D INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
+
+# Track and drop TCP RST packets
+iptables -I INPUT -p tcp --tcp-flags RST RST -j DROP
+
+# Drop RST packets on port 443 (HTTPS)
+iptables -I INPUT -p tcp --sport 443 --tcp-flags RST RST -j DROP
+
+# Save the iptables configuration
+iptables-save > /etc/iptables/iptables.rules
+

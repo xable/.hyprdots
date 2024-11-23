@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Array of processes to be restarted
+processes=("waybar" "dunst" "wpaperd")
+
+# Function to restart a process
+restart_process() {
+    process_name=$1
+
+    # Check if the process is running
+    if pgrep -x "$process_name" > /dev/null; then
+        echo "Restarting process: $process_name"
+
+        # Kill the process
+        pkill -x "$process_name"
+
+        # Wait for a couple of seconds to ensure the process has fully stopped
+        sleep 2
+
+        # Restart the process
+        "$process_name" &
+
+        echo "Process $process_name has been restarted."
+    else
+        echo "Process $process_name is not running."
+    fi
+}
+
+# Function to change GTK theme if it exists
+change_gtk_and_icon_theme() {
+    # Check if theme exists in the user's themes folder
+    if [ -d "$HOME/.themes/{{ gtk }}" ]; then
+        echo "Changing GTK theme to {{ gtk }}..."
+        gsettings set org.gnome.desktop.interface gtk-theme "{{ gtk }}"
+        gsettings set org.gnome.desktop.wm.preferences theme "{{ gtk }}"
+        echo "GTK theme changed to {{ gtk }}."
+    else
+        echo "{{ gtk }} GTK theme not found. GTK theme not changed."
+    fi
+
+    # Check if icon theme exists
+    if [ -d "$HOME/.icons/{{ gtk }}" ]; then
+        echo "Changing icon theme to {{ gtk }}..."
+        gsettings set org.gnome.desktop.interface icon-theme "{{ gtk }}"
+        echo "Icon theme changed to {{ gtk }}."
+    else
+        echo "{{ gtk }} icon theme not found. Icon theme not changed."
+    fi
+}
+
+# Change GTK theme and icon theme, if exist
+change_gtk_and_icon_theme
+
+# Restart each process in the list
+for process in "${processes[@]}"; do
+    restart_process "$process"
+done
+
+notify-send "󰑓 RELOADED"

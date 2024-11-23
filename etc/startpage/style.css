@@ -1,0 +1,46 @@
+@import url('file:///home/user/.mozilla/colors.css');
+
+html,
+body {
+  background-color: var(--blk) !important;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: normal;
+  margin-left: 10%;
+  height: 95%;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--wht) !important;
+  font-weight: normal;
+  font-size: 11pt;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--bwht) !important;
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+table {
+  border-spacing: 7px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+td:first-child {
+  font-weight: normal;
+  font-size: 11pt;
+  color: var(--red) !important;
+}
+
+td:nth-child(2) {
+  font-weight: normal;
+  font-size: 11pt;
+  color: var(--mag) !important;
+}

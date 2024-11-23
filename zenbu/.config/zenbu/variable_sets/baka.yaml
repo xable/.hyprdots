@@ -1,0 +1,41 @@
+# BAKA
+name: "baka"
+gtk:  "oomox-Baka"
+
+#WALLPAPER
+wallpaper:  "baka.jpg"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "66767F"
+    wmbu:       "273B47"
+
+    background: "#111E26"
+    foreground: "#92A0A7"
+    cursor:     "#66767F"
+
+    black:
+        normal: "#16242D"
+        bold:   "#273B47"
+    red:
+        normal: "#653436"
+        bold:   "#804749"
+    green:
+        normal: "#4A724E"
+        bold:   "#638F67"
+    yellow:
+        normal: "#654D47"
+        bold:   "#7B5D56"
+    blue:
+        normal: "#33556A"
+        bold:   "#467086"
+    magenta:
+        normal: "#3D3B6D"
+        bold:   "#4A4683"
+    cyan:
+        normal: "#3B6B71"
+        bold:   "#6E9EA5"
+    white:
+        normal: "#C6C6BA"
+        bold:   "#DCDDCF"

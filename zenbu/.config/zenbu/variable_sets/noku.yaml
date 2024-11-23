@@ -1,0 +1,41 @@
+# NOKU
+name: "noku"
+gtk:  "oomox-Noku"
+
+#WALLPAPER
+wallpaper:  "noku.png"
+wtype:      "tile"
+
+#COLORS
+colors:
+    wmbf:       "494A54"
+    wmbu:       "24252F"
+
+    background: "#14151F"
+    foreground: "#E5EAF0"
+    cursor:     "#494A54"
+
+    black:
+        normal: "#1A1B26"
+        bold:   "#24252F"
+    red:
+        normal: "#A54242"
+        bold:   "#E54646"
+    green:
+        normal: "#8C9440"
+        bold:   "#C1CE45"
+    yellow:
+        normal: "#DE935F"
+        bold:   "#FFBB66"
+    blue:
+        normal: "#7290B2"
+        bold:   "#80A1C0"
+    magenta:
+        normal: "#85678F"
+        bold:   "#B475C9"
+    cyan:
+        normal: "#7DBAA8"
+        bold:   "#88D0BA"
+    white:
+        normal: "#D1D6DC"
+        bold:   "#E5EAF0"

@@ -1,0 +1,41 @@
+# MIDNIGHT
+name: "midnight"
+gtk:  "oomox-Midnight"
+
+#WALLPAPER
+wallpaper:  "midnight.jpg"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "b9b9b9"
+    wmbu:       "314246"
+
+    background: "#102020"
+    foreground: "#b9b9b9"
+    cursor:     "#b9b9b9"
+
+    black:
+        normal: "#1b2e32"
+        bold:   "#314246"
+    red:
+        normal: "#b22539"
+        bold:   "#b93a4c"
+    green:
+        normal: "#7c9e87"
+        bold:   "#8ab096"
+    yellow:
+        normal: "#d6b3c4"
+        bold:   "#fbcbe2"
+    blue:
+        normal: "#2f3843"
+        bold:   "#353f4b"
+    magenta:
+        normal: "#73729b"
+        bold:   "#8c8cbe"
+    cyan:
+        normal: "#63878e"
+        bold:   "#7da9b1"
+    white:
+        normal: "#b9b9b9"
+        bold:   "#cbcee3"

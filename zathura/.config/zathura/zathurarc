@@ -1,0 +1,32 @@
+## ~/.config/zathura/zathurarc
+
+set n-completion-items 10
+set zoom-step 5
+set page-padding 0
+set pages-per-row 1
+set recolor true
+set adjust-open best-fit
+
+set font "JetBrainsMono Nerd Font 11"
+set default-bg "#111E26"
+set default-fg "#DCDDCF"
+set inputbar-bg "#16242D"
+set inputbar-fg "#DCDDCF"
+set statusbar-bg "#16242D"
+set statusbar-fg "#DCDDCF"
+set index-bg "#16242D"
+set index-fg "#DCDDCF"
+set index-active-bg "#3D3B6D"
+set index-active-fg "#DCDDCF"
+set completion-bg "#16242D"
+set completion-fg "#DCDDCF"
+set completion-group-bg "#16242D"
+set completion-group-fg "#DCDDCF"
+set completion-highlight-bg "#33556A"
+set completion-highlight-fg "#4A4683"
+set notification-error-bg "#16242D"
+set notification-error-fg "#DCDDCF"
+set notification-warning-bg "#16242D"
+set notification-warning-fg "#DCDDCF"
+set recolor-darkcolor "#DCDDCF"
+set recolor-lightcolor "#111E26"

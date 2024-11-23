@@ -1,0 +1,336 @@
+/*
+  Firefox Proton compact style
+  Sources:
+  https://github.com/Mrbigdog99/Proton-compact
+*/
+
+@import url('file:///home/user/.mozilla/colors.css');
+
+:root {
+  --bg-body: var(--blk);
+  --bg-tab: var(--red);
+  --bg-ina: var(--bblk);
+  --animation: var(--bred);
+  --tab-font: "JetBrains Mono";
+  --tab-font-size 9pt;
+  --url-font: "JetBrains Mono";
+  --url-font-size: 9pt;
+  --arrowpanel-menuitem-margin: 0px 4px !important;
+  /* Left and right */
+  --arrowpanel-menuitem-padding-block: 4px !important;
+  --toolbar-field-focus-border-color: transparent !important;
+  --panel-subview-body-padding: 4px 0 !important;
+  /* Top and bottom */
+}
+
+/* TABS */
+#titlebar {
+  --tab-min-height: 24px !important;
+  /* Tab size. 26 Compact */
+  --tab-block-margin: 3px !important;
+  /* Padding above and below tabs. 2 Compact */
+}
+
+.tabbrowser-tab {
+  padding-inline: 1.5px !important;
+  /* Padding between tabs. 1 Compact */
+}
+
+#tabs-newtab-button {
+  /* padding-inline-start: 1px !important; */
+  /* Padding between tabs and new tab button. Uncomment for Compact */
+}
+
+.tab-close-button {
+  width: 20px !important;
+  /* 22 Normal */
+  height: 20px !important;
+  /* 22 Normal */
+  padding: 5px !important;
+  /* 6 Normal */
+}
+
+.tabbrowser-tab:not(:hover) .close-icon {
+  opacity: 0 !important
+}
+
+/* .tab-secondary-label */
+  {
+  /* font-size: .72em !important; */
+  /* Resizes the text under the tab title when there's audio playing. */
+  /* margin-top: -1px !important; */
+  /* font-size: 0 !important; */
+  /* Uncomment to remove the text, but the audio icon won't display on the tab unless you hover your mouse over the tab area. */
+}
+
+.tab-loading-burst[bursting]::before {
+  fill: var(--animation) !important
+}
+
+#tabbrowser-tabs,
+.tabbrowser-arrowscrollbox {
+  background: var(--bg-body) !important;
+}
+
+.tab-background[selected="false"],
+.tabbrowser-tab {
+  background: var(--bg-body) !important;
+}
+
+.tab-background[selected] {
+  background: var(--bg-tab) !important;
+  box-shadow: none !important;
+}
+
+.tab-background {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.tab-content {
+  font-family: var(--tab-font) !important;
+  font-size: var(--tab-font-size) !important;
+}
+
+.browserContainer {
+  background-color: var(--bg-body) !important;
+}
+
+.tabbrowser-tab:hover .tab-background:not([selected]) {
+  background: var(--bg-ina) !important;
+}
+
+.tab-label-container {
+  height: unset !important;
+}
+
+#tabbrowser-tabs {
+  border-inline-start: unset !important;
+}
+
+/* URL-BAR */
+#urlbar {
+  background: var(--bg-body) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 0px !important;
+  border-radius: 0px !important;
+  --urlbar-height: 22.00px !important;
+  /* 24 Compact */
+  --urlbar-toolbar-height: 26px !important;
+  /* 30 Compact */
+  --urlbar-min-height: 22px !important;
+  /* Should be the same value as --url-bar-height. */
+  --urlbar-icon-padding: 3px !important;
+  /* Padding of the icons in the URL bar. */
+  --urlbar-container-padding: 0px !important;
+  /* Padding of the icons in the URL bar. Set to 0 if using above compact values, or the bookmark star and other icons are to small. */
+}
+
+#urlbar-background {
+  background-color: var(--bg-body) !important;
+  animation: none !important;
+}
+
+#urlbar[breakout][breakout-extend],
+#urlbar-background,
+#urlbar[breakout][breakout-extend]>#urlbar-input-container,
+#urlbar[breakout]>#urlbar-input-container {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#urlbar-input-container {
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+#identity-box,
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+  background: var(--bg-body) !important
+}
+
+.titlebar-spacer {
+  display: none !important;
+}
+
+#urlbar-container {
+  --urlbar-container-height: 26.00px !important;
+  /* Should be the same value as --urlbar-toolbar-height. */
+}
+
+/* Fixes size of box when you use a search shortcut and press escape. Uncomment if using above compact values. */
+#urlbar-search-mode-indicator {
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+}
+
+#identity-icon-box {
+  margin-left: 1px !important;
+  /* Moves search icon 1 pixel to the right. */
+}
+
+/* Navbar icons. */
+#nav-bar,
+#navigator-toolbox {
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: 0px !important;
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
+  margin-bottom: 0px !important;
+  background: var(--bg-body) !important;
+  font-family: var(--url-font) !important;
+  font-size: var(--url-font-size) !important;
+  --toolbar-start-end-padding: 6px !important;
+  /* Navbar button edge padding */
+  --toolbarbutton-outer-padding: 4px !important;
+  /* Padding of the icons. */
+  --toolbarbutton-inner-padding: 5px !important;
+  /* Padding of the icons. */
+}
+
+#navigator-toolbox {
+  --lwt-tabs-border-color: transparent !important;
+}
+
+#tabbrowser-tabs {
+  --lwt-tab-line-color: transparent !important;
+}
+
+/* Bookmarks bar. */
+#PersonalToolbar {
+  padding-inline: 4px !important;
+  /* Padding from the edges. */
+  --bookmark-block-padding: 1px !important;
+  /* How big the bookmarks on the bar are. */
+  /* margin-top: -1px !important; */
+  /* margin-bottom: -1px !important; */
+}
+
+#personal-bookmarks {
+  /* margin-block: -1px; */
+  /* Reduces size of bookmark bar. Uncomment for Compact. */
+}
+
+/* Searchbar size fix */
+#search-container {
+  min-height: 22px !important;
+  /* Should be same as --urlbar-min-height */
+  height: 22px !important;
+  /* Should be same as --urlbar-min-height */
+}
+
+#search-container {
+  padding-block: 3px !important;
+}
+
+/* Tab lebel masking. */
+.tabbrowser-tab {
+  --tab-label-mask-size: 1em !important;
+}
+
+.tabbrowser-tab[visuallyselected=true]:hover,
+#tabbrowser-tabs:not([closebuttons=activetab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected=true]):hover {
+  --tab-label-mask-size: 1.3em !important;
+}
+
+.tab-label-container:not([pinned]) {
+  margin-right: -3px !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-label-container {
+  margin-right: 0px !important;
+}
+
+/*** Compact sound icon ***/
+/* Disables the text when audio is playing etc. */
+.tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]) {
+  display: none !important;
+}
+
+/* Always show the favicon when sound is playing etc. */
+.tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture])> :not(.tab-icon-overlay) {
+  opacity: 1 !important;
+}
+
+/** Fallback when there's no favicon **/
+.tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
+  top: 0 !important;
+  inset-inline-end: 0 !important;
+  stroke: transparent !important;
+}
+
+/** Tighten up drop-down/context/popup menu spacing **/
+menupopup>menuitem,
+menupopup>menu {
+  padding-block: 0.2em !important;
+}
+
+/* Bookmarks menu padding */
+#BMB_bookmarksPopup .subviewbutton {
+  padding: 0.2em !important;
+}
+
+/* Personal Toolbar menu padding */
+#PersonalToolbar {
+  max-height: 3em !important;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+  display: none;
+}
+
+/* Make urlbar appear more compact */
+#urlbar[breakout] {
+  margin-inline-start: 0px !important;
+  width: 100% !important;
+  left: 0 !important;
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+}
+
+#urlbar[breakout]:not([open]) {
+  bottom: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+}
+
+.urlbarView {
+  margin-inline: 0 !important;
+  width: auto !important;
+}
+
+.urlbarView-row {
+  padding: 0 2px !important;
+}
+
+.urlbarView-row-inner {
+  padding-inline-start: 4px !important;
+}
+
+#urlbar-background {
+  animation: none !important;
+}
+
+#urlbar-input-container {
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+#identity-icon {
+  margin-block: var(--urlbar-icon-padding)
+}
+
+.urlbarView>.search-one-offs:not([hidden]) {
+  padding-block: 0px !important;
+}

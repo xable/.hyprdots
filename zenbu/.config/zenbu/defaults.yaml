@@ -1,0 +1,84 @@
+name: "default"
+
+#WALLPAPER
+wallpaper:  "defu.png"
+wtype:      "tile"
+
+#FONTS
+fonts:
+    #JetBrainsMono Nerd Font
+    font1: "JetBrainsMono Nerd Font"
+    font2: "JetBrainsMono Nerd Font 11"
+
+#COLORS
+colors:
+    wmbf:           "#374650"
+    wmbu:           "#252C31"
+
+    background:     "#1b2227"
+    foreground:     "#7b8695"
+    cursor:         "#7b8695"
+
+    black:
+        normal:     "#252c31"
+        bold:       "#374650"
+    red:
+        normal:     "#785561"
+        bold:       "#8a6270"
+    green:
+        normal:     "#58614f"
+        bold:       "#6d7762"
+    yellow:
+        normal:     "#7e735a"
+        bold:       "#8d8063"
+    blue:
+        normal:     "#424a64"
+        bold:       "#626c94"
+    magenta:
+        normal:     "#4d3e4c"
+        bold:       "#665064"
+    cyan:
+        normal:     "#3c5a5d"
+        bold:       "#548084"
+    white:
+        normal:     "#7b8695"
+        bold:       "#94a1b3"
+
+#UTILITY
+colornumbers:
+    black:    0
+    red:      1
+    green:    2
+    yellow:   3
+    blue:     4
+    magenta:  5
+    cyan:     6
+    white:    7
+
+#CONVENIENCE
+bgc:        "{{ colors.background }}"
+fgc:        "{{ colors.foreground }}"
+csc:        "{{ colors.cursor }}"
+
+n_black:    "{{ colors.black.normal }}"
+b_black:    "{{ colors.black.bold }}"
+n_red:      "{{ colors.red.normal }}"
+b_red:      "{{ colors.red.bold }}"
+n_green:    "{{ colors.green.normal }}"
+b_green:    "{{ colors.green.bold }}"
+n_yellow:   "{{ colors.yellow.normal }}"
+b_yellow:   "{{ colors.yellow.bold }}"
+n_blue:     "{{ colors.blue.normal }}"
+b_blue:     "{{ colors.blue.bold }}"
+n_magenta:  "{{ colors.magenta.normal }}"
+b_magenta:  "{{ colors.magenta.bold }}"
+n_cyan:     "{{ colors.cyan.normal }}"
+b_cyan:     "{{ colors.cyan.bold }}"
+n_white:    "{{ colors.white.normal }}"
+b_white:    "{{ colors.white.bold }}"
+
+wmf:  "{{ colors.wmbf }}"
+wmu:  "{{ colors.wmbu }}"
+
+font1: "{{ fonts.font1 }}"
+font2: "{{ fonts.font2 }}"

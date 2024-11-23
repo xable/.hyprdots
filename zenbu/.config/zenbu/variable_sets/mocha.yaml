@@ -1,0 +1,42 @@
+# MOCHA
+name: "mocha"
+gtk:  "oomox-Mocha"
+
+#WALLPAPER
+wallpaper:  "mocha.png"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "D9E0EE"
+    wmbu:       "6C6A8D"
+
+    background: "#1E1E2E"
+    foreground: "#D9E0EE"
+    cursor:     "#D9E0EE"
+
+    black:
+        normal: "#1E1E2E"
+        bold:   "#6C6A8D"
+    red:
+        normal: "#F28FAD"
+        bold:   "#F28FAD"
+    green:
+        normal: "#A6D189"
+        bold:   "#A6D189"
+    yellow:
+        normal: "#E7C787"
+        bold:   "#E7C787"
+    blue:
+        normal: "#76C7D1"
+        bold:   "#76C7D1"
+    magenta:
+        normal: "#D2A6FF"
+        bold:   "#D2A6FF"
+    cyan:
+        normal: "#99E1D9"
+        bold:   "#99E1D9"
+    white:
+        normal: "#D9E0EE"
+        bold:   "#D9E0EE"
+

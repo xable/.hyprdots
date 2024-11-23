@@ -1,0 +1,41 @@
+# ASTRO
+name: "astro"
+gtk:  "oomox-Astro"
+
+#WALLPAPER
+wallpaper:  "wallhaven-x6ypl3.png"
+wtype:      "fill"
+
+#COLORS
+colors:
+    wmbf:       "ADB0BB"
+    wmbu:       "34363A"
+
+    background: "#1A1D23"
+    foreground: "#ADB0BB"
+    cursor:     "#ADB0BB"
+
+    black:
+        normal: "#111317"
+        bold:   "#34363A"
+    red:
+        normal: "#FF838B"
+        bold:   "#FFA6AE"
+    green:
+        normal: "#87C05F"
+        bold:   "#AAE382"
+    yellow:
+        normal: "#DFAB25"
+        bold:   "#FFCE48"
+    blue:
+        normal: "#5EB7FF"
+        bold:   "#81DAFF"
+    magenta:
+        normal: "#DD97F1"
+        bold:   "#FFBAFF"
+    cyan:
+        normal: "#4AC2B8"
+        bold:   "#6DE5DB"
+    white:
+        normal: "#9B9FA9"
+        bold:   "#D0D3DE"

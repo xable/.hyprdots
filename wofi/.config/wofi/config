@@ -1,0 +1,12 @@
+width=350
+height=600
+no_actions=true
+hide_scroll=true
+columns=1
+image_size=20
+prompt=
+term=kitty
+insensitive=true
+show=drun
+always_parse_args=true
+show_all=true

@@ -1,0 +1,20 @@
+
+@define-color background {{ bgc }};
+@define-color foreground  {{ fgc }};
+@define-color cursor {{ csc }};
+@define-color color0 {{ n_black }};
+@define-color color8 {{ b_black }};
+@define-color color1 {{ n_red }};
+@define-color color9 {{ b_red }};
+@define-color color2 {{ n_green }};
+@define-color color10 {{ b_green }};
+@define-color color3 {{ n_yellow }};
+@define-color color11 {{ b_yellow }};
+@define-color color4 {{ n_blue }};
+@define-color color12 {{ b_blue }};
+@define-color color5 {{ n_magenta }};
+@define-color color13 {{ b_magenta }};
+@define-color color6 {{ n_cyan }};
+@define-color color14 {{ b_cyan }};
+@define-color color7 {{ n_white }};
+@define-color color15 {{ b_white }};

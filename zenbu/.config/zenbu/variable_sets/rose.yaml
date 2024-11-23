@@ -1,0 +1,41 @@
+# ROSE
+name: "rose"
+gtk:  "oomox-Rose"
+
+#WALLPAPER
+wallpaper:  "rose.png"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "e0def4"
+    wmbu:       "56526e"
+
+    background: "#232136"
+    foreground: "#e0def4"
+    cursor:     "#56526e"
+
+    black:
+        normal: "#393552"
+        bold:   "#6e6a86"
+    red:
+        normal: "#eb6f92"
+        bold:   "#eb6f92"
+    green:
+        normal: "#3e8fb0"
+        bold:   "#3e8fb0"
+    yellow:
+        normal: "#f6c177"
+        bold:   "#f6c177"
+    blue:
+        normal: "#9ccfd8"
+        bold:   "#9ccfd8"
+    magenta:
+        normal: "#c4a7e7"
+        bold:   "#c4a7e7"
+    cyan:
+        normal: "#ea9a97"
+        bold:   "#ea9a97"
+    white:
+        normal: "#e0def4"
+        bold:   "#e0def4"

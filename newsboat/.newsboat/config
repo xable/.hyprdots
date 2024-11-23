@@ -1,0 +1,26 @@
+# General
+auto-reload "yes"
+reload-time "20"
+player "mpv"
+browser "firefox"
+
+# Notification
+notify-always "yes"
+notify-program "notify-send"
+notify-format "newsboat: %n unread articles within %f unread feeds"
+
+
+# <element>                 <fg>        <bg>         <attr>
+color info                  white       magenta
+color listnormal_unread     magenta     default
+color listfocus_unread      white       blue
+color listfocus             white       blue
+color listnormal            cyan        default
+color article               white       default
+
+# highlight feedlist    "^  *[0-9]+  *N  .*"    red    default
+# highlight articlelist "^  *[0-9]+  *N  .*"    red    default
+highlight article "(^Feed:|^Title:|^Author:|^Link:|^Date:|^Podcast Download URL:)"    red default
+
+macro o set browser open-in-browser
+macro y set browser "mpv %u"; open-in-browser ; set browser "firefox %u"

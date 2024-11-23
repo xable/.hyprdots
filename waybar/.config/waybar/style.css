@@ -1,0 +1,156 @@
+@import "colors.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: normal;
+  font-size: 12pt;
+  min-height: 0;
+}
+
+window#waybar {
+  border-radius: 0px;
+  background-color: @background;
+}
+
+#power-profiles-daemon {
+  padding: 2px 15px;
+  margin: 5px 5px 5px 10px;
+  color: @color10;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#workspaces {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color15;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0px;
+}
+
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  background-color: transparent;
+  color: @color15;
+}
+
+#workspaces button:hover {
+  color: @color12;
+}
+
+#workspaces button.focused {}
+
+#workspaces button.urgent {}
+
+#window {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color14;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#custom-weather {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color15;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#tray {
+  padding: 2px 15px;
+  margin: 5px;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#network {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color15;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#pulseaudio {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color12;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#pulseaudio.muted {
+  color: @color9;
+}
+
+#pulseaudio:hover {
+  color: @color12;
+}
+
+#clock {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color15;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#clock:hover {
+  color: @color12;
+}
+
+#battery {
+  padding: 2px 15px;
+  margin: 5px 10px 5px 5px;
+  color: @color10;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+#battery:hover {
+  color: @color9;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @color11;
+}
+
+#backlight {
+  padding: 2px 15px;
+  margin: 5px;
+  color: @color15;
+  background-color: @color0;
+  border: none;
+  border-radius: 10px;
+}
+
+tooltip {
+  background: @color0;
+  margin: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}

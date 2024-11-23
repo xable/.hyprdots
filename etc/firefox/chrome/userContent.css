@@ -1,0 +1,15 @@
+@namespace url("http://www.w3.org/1999/xhtml");
+
+:root {
+  scrollbar-color: #E54646 #1A1B26 !important;
+  scrollbar-width: thin !important;
+}
+
+* {
+  scrollbar-width: thin !important;
+}
+
+@-moz-document url(about:blank), url(about:home), url(about:newtab) {
+ body {
+     background-color: #1A1B26 !important;
+  }

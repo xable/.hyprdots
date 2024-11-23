@@ -1,0 +1,35 @@
+* {
+  all: unset;
+  font-family: "{{ font1 }}";
+  font-size: 12pt;
+}
+
+#window {
+  background-color: {{ n_black }};
+  border-radius: 10px;
+}
+
+#outer-box {
+  background-color: {{ n_black }};
+  border: 4px solid {{ n_magenta }};
+  border-radius: 10px;
+}
+
+#input {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: {{ b_black }};
+}
+
+#entry {
+  margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  color: {{ n_white }};
+  border-radius: 8px;
+}
+
+#entry:selected {
+  background-color: {{ n_magenta }};
+  color: {{ fgc }};
+}

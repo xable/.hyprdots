@@ -1,0 +1,41 @@
+# LUNAR
+name: "lunar"
+gtk:  "oomox-Lunar"
+
+#WALLPAPER
+wallpaper:  "gobbler.png"
+wtype:      "tile"
+
+#COLORS
+colors:
+    wmbf:       "6e7f99"
+    wmbu:       "59626b"
+
+    foreground: "#caf0ec"
+    background: "#1e2832"
+    cursor:     "#6e7f99"
+
+    black:
+        normal: "#353e47"
+        bold:   "#59626b"
+    red:
+        normal: "#675665"
+        bold:   "#927a90"
+    green:
+        normal: "#3a6469"
+        bold:   "#5a9295"
+    yellow:
+        normal: "#a5b0aa"
+        bold:   "#e1f0e4"
+    blue:
+        normal: "#515e71"
+        bold:   "#6e7f99"
+    magenta:
+        normal: "#636d73"
+        bold:   "#81779d"
+    cyan:
+        normal: "#2b908c"
+        bold:   "#3bc7bc"
+    white:
+        normal: "#bdb8c1"
+        bold:   "#ebcbde"

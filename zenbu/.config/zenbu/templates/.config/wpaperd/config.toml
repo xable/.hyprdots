@@ -1,0 +1,6 @@
+[default]
+mode = "{{ wtype }}"
+sorting = "ascending"
+
+[any]
+path = "~/Pictures/BG/{{ wallpaper }}"

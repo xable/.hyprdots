@@ -1,0 +1,20 @@
+:root {
+  --bg: {{ bgc }};
+  --fg: {{ fgc }};
+  --blk: {{ n_black }};
+  --red: {{ n_red }};
+  --grn: {{ n_green }};
+  --ylw: {{ n_yellow }};
+  --blu: {{ n_blue }};
+  --mag: {{ n_magenta }};
+  --cyn: {{ n_cyan }};
+  --wht: {{ n_white }};
+  --bblk: {{ b_black }};
+  --bred: {{ b_red }};
+  --bgrn: {{ b_green }};
+  --bylw: {{ b_yellow }};
+  --bblu: {{ b_blue }};
+  --bmag: {{ b_magenta }};
+  --bcyn: {{ b_cyan }};
+  --bwht: {{ b_white }};
+}
