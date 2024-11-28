@@ -17,11 +17,11 @@ if [ -d ~/.config/fish ]; then
     rm -rf ~/.config/fish
 fi
 
-if [ -d ~/.config/hypr]; then
+if [ -d ~/.config/hypr ]; then
     rm -rf ~/.config/hypr
 fi
 
-if [ -d ~/.config/kitty]; then
+if [ -d ~/.config/kitty ]; then
     rm -rf ~/.config/kitty
 fi
 
