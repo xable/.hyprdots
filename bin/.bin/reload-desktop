@@ -15,7 +15,7 @@ restart_process() {
         pkill -x "$process_name"
 
         # Wait for a couple of seconds to ensure the process has fully stopped
-        sleep 2
+        sleep 1
 
         # Restart the process
         "$process_name" &

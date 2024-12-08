@@ -16,19 +16,13 @@
   --url-font: "JetBrains Mono";
   --url-font-size: 9pt;
   --arrowpanel-menuitem-margin: 0px 4px !important;
+  --tab-min-height: 24px !important;
+  --tab-block-margin: 3px !important;
   /* Left and right */
   --arrowpanel-menuitem-padding-block: 4px !important;
   --toolbar-field-focus-border-color: transparent !important;
   --panel-subview-body-padding: 4px 0 !important;
   /* Top and bottom */
-}
-
-/* TABS */
-#titlebar {
-  --tab-min-height: 24px !important;
-  /* Tab size. 26 Compact */
-  --tab-block-margin: 3px !important;
-  /* Padding above and below tabs. 2 Compact */
 }
 
 .tabbrowser-tab {
@@ -52,15 +46,6 @@
 
 .tabbrowser-tab:not(:hover) .close-icon {
   opacity: 0 !important
-}
-
-/* .tab-secondary-label */
-  {
-  /* font-size: .72em !important; */
-  /* Resizes the text under the tab title when there's audio playing. */
-  /* margin-top: -1px !important; */
-  /* font-size: 0 !important; */
-  /* Uncomment to remove the text, but the audio icon won't display on the tab unless you hover your mouse over the tab area. */
 }
 
 .tab-loading-burst[bursting]::before {
@@ -216,11 +201,6 @@ browser[type=content]>html {
   /* margin-bottom: -1px !important; */
 }
 
-#personal-bookmarks {
-  /* margin-block: -1px; */
-  /* Reduces size of bookmark bar. Uncomment for Compact. */
-}
-
 /* Searchbar size fix */
 #search-container {
   min-height: 22px !important;
@@ -289,20 +269,8 @@ menupopup>menu {
   display: none;
 }
 
-/* Make urlbar appear more compact */
-#urlbar[breakout] {
-  margin-inline-start: 0px !important;
-  width: 100% !important;
-  left: 0 !important;
-  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
-}
-
 #urlbar .search-one-offs:not([hidden]) {
   display: none !important;
-}
-
-#urlbar[breakout]:not([open]) {
-  bottom: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
 }
 
 .urlbarView {
