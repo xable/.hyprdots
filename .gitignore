@@ -9,7 +9,6 @@ oomox/.config/oomox/export_config/
 oomox/.config/oomox/ui_config.json
 oomox/.config/oomox/recent_palette.json
 oomox/.config/oomox/migrations
-ranger/.config/ranger/bookmarks
 ncmpcpp/.config/ncmpcpp/error.log
 newsboat/.newsboat/cache.db
 newsboat/.newsboat/history.cmdline

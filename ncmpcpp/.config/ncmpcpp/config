@@ -1,9 +1,12 @@
-# Music location
-mpd_music_dir = "~/Music"
+# MPD setings
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "$HOME/Music"
 
 # Playlist look
 playlist_display_mode = "classic"
-song_list_format = "$2{%a}|{%A}$8 $6-$8 $7%t$8"
+#song_list_format = "$2{%a}|{%A}$8 $6-$8 $7%t$8"
+song_list_format = "$7%t$1 $R$2%a$1"
 
 song_status_format = "{$2%t $b$3- $7%a}|{%f}"
 now_playing_prefix = "$b"

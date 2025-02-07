@@ -61,7 +61,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
-    "exec": "wttrbar --lang ru --location Minsk --hide-conditions",
+    "exec": "wttrbar --nerd --lang ru --location Minsk --hide-conditions --date-format %d-%m-%Y",
     "return-type": "json"
   },
   "tray": {

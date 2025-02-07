@@ -13,8 +13,6 @@ set -gx BAT_THEME Coldark-Dark
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -gx RHISK_COMM zenbu
-set -gx MPD_HOST 127.0.0.1
-set -gx MPD_PORT 6600
 set -gx npm_config_prefix $HOME/.local
 set -gx PATH $HOME/.bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
@@ -98,4 +96,5 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias wttr='curl wttr.in'
 alias rtx='curl rate.sx'
+alias rss='newsboat'
 alias ytdl='yt-dlp -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'

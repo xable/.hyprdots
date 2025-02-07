@@ -1,0 +1,41 @@
+# MONO
+name: "mono"
+gtk: "oomox-mono"
+
+#WALLPAPER
+wallpaper:  "annie_onedark.png"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "F2F2F2"
+    wmbu:       "313131"
+background: "#0D0D0D"
+foreground: "#F2F2F2"
+cursor:     "#F2F2F2"
+
+black:
+    normal: "#2D2D2D"
+    bold:   "#313131"
+red:
+    normal: "#595959"
+    bold:   "#8C8C8C"
+green:
+    normal: "#A9A9A9"
+    bold:   "#C9C9C9"
+yellow:
+    normal: "#BFBFBF"
+    bold:   "#DFDFDF"
+blue:
+    normal: "#5E5E5E"
+    bold:   "#7E7E7E"
+magenta:
+    normal: "#3B3B3B"
+    bold:   "#3B3B3B"
+cyan:
+    normal: "#B6B6B6"
+    bold:   "#D6D6D6"
+white:
+    normal: "#F2F2F2"
+    bold:   "#FFFFFF"
+

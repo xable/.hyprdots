@@ -1,0 +1,42 @@
+# ROSE
+name: "everblush"
+gtk:  "oomox-Everblush"
+
+#WALLPAPER
+wallpaper:  "pacman.png"
+wtype:      "center"
+
+#COLORS
+colors:
+    wmbf:       "394448"
+    wmbu:       "293134"
+
+    background: "#141b1e"
+    foreground: "#dadada"
+    cursor:     "#2d3437"
+
+    black:
+        normal: "#232a2d"
+        bold:   "#2d3437"
+    red:
+        normal: "#e57474"
+        bold:   "#ef7e7e"
+    green:
+        normal: "#8ccf7e"
+        bold:   "#96d988"
+    yellow:
+        normal: "#e5c76b"
+        bold:   "#f4d67a"
+    blue:
+        normal: "#67b0e8"
+        bold:   "#71baf2"
+    magenta:
+        normal: "#c47fd5"
+        bold:   "#ce89df"
+    cyan:
+        normal: "#6cbfbf"
+        bold:   "#67cbe7"
+    white:
+        normal: "#b3b9b8"
+        bold:   "#bdc3c2"
+
