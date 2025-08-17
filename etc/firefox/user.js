@@ -208,3 +208,6 @@ user_pref("extensions.unifiedExtensions.enabled", false);
 user_pref("dom.private-attribution.submission.enabled", false);
 user_pref("toolkit.telemetry.dap_helper", "");
 user_pref("toolkit.telemetry.dap_leader", "");
+user_pref("datareporting.usage.uploadEnabled", false);
+user_pref("extensions.getAddons.cache.enabled", false);
+user_pref("security.csp.reporting.enabled", false);

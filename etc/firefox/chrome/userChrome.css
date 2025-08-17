@@ -28,6 +28,11 @@
   --toolbar-field-focus-border-color: transparent !important;
   --panel-subview-body-padding: 4px 0 !important;
   /* Top and bottom */
+  --arrowpanel-menuitem-padding: 1px 1px !important;
+  --arrowpanel-menuitem-margin-inline: 1px !important;
+  --arrowpanel-menuitem-padding-block: 1px !important;
+  --panel-separator-margin-horizontal: 1px !important;
+  --panel-subview-body-padding-block: 1px !important;
 }
 
 .tabbrowser-tab {
