@@ -104,17 +104,13 @@
 }
 
 /* URL-BAR */
-#urlbar {
-  background: var(--bg-body) !important;
+#urlbar,
+.urlbar-background {
+  background-color: var(--bg-body) !important;
   border: none !important;
   box-shadow: none !important;
   border-bottom: 0px !important;
   border-radius: 0px !important;
-}
-
-#urlbar-background {
-  background-color: var(--bg-body) !important;
-  animation: none !important;
 }
 
 #urlbar[breakout][breakout-extend],

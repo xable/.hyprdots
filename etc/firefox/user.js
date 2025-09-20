@@ -211,3 +211,7 @@ user_pref("toolkit.telemetry.dap_leader", "");
 user_pref("datareporting.usage.uploadEnabled", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("security.csp.reporting.enabled", false);
+user_pref("browser.urlbar.trimurls", false);
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.enable", false);
+user_pref("security.csp.reporting.enabled", false);
