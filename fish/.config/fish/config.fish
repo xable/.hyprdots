@@ -34,7 +34,7 @@ if not _ssh_agent_is_started
 end
 
 # Theme
-set -q MY_THEME; or set -gx MY_THEME night
+set -q MY_THEME; or set -gx MY_THEME dracula
 fish_config theme choose $MY_THEME
 
 # Navigation

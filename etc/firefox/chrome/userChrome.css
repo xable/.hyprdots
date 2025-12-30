@@ -23,6 +23,12 @@
   --urlbar-min-height: 22px !important;
   --urlbar-icon-padding: 3px !important;
   --urlbar-container-padding: 0px !important;
+  --tab-border-radius: var(--toolbarbutton-border-radius);
+  --toolbarbutton-border-radius: var(--button-border-radius);
+  --button-border-radius: var(--border-radius-medium);
+  --border-radius-medium: 5px !important;
+  --arrowpanel-border-radius: 5px !important;
+  --arrowpanel-menuitem-border-radius: 5px !important;
   /* Left and right */
   --arrowpanel-menuitem-padding-block: 4px !important;
   --toolbar-field-focus-border-color: transparent !important;

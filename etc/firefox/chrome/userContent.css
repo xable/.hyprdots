@@ -9,7 +9,7 @@
   scrollbar-width: thin !important;
 }
 
-@-moz-document url(about:blank), url(about:home), url(about:newtab) {
- body {
-     background-color: #1A1B26 !important;
-  }
+@-moz-document url(about:blank), url(about:home), url(about:newtab){
+body {
+  background-color: #16242D !important;
+}
