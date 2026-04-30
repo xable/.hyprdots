@@ -1,5 +1,5 @@
 [default]
-mode = "center"
+mode = "cover"
 sorting = "ascending"
 
 [any]

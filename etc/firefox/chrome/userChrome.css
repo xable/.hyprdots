@@ -4,7 +4,7 @@
   https://github.com/Mrbigdog99/Proton-compact
 */
 
-@import url('file:///home/xable/.mozilla/colors.css');
+@import url('file:///home/user/.config/mozilla/colors.css');
 
 :root {
   --bg-body: var(--blk);
@@ -308,4 +308,8 @@ menupopup>menu {
 
 .urlbarView>.search-one-offs:not([hidden]) {
   padding-block: 0px !important;
+}
+
+#urlbar-searchmode-switcher {
+  display: none !important;
 }

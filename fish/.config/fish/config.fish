@@ -1,9 +1,5 @@
 set -g fish_greeting
 
-if status is-interactive
-	starship init fish | source
-end
-
 # ENV
 set -gx TERMINAL xterm-kitty
 set -gx BROWSER firefox
@@ -54,7 +50,7 @@ alias ls='eza --color=always --group-directories-first --git --icons --no-user -
 alias la='eza -al --color=always --group-directories-first --git --icons --no-user --no-time --no-permissions'
 
 # Pacman
-abbr -a -- upd "paru -Syu"
+abbr -a -- upd "yay -Syu"
 abbr -a -- pac "sudo pacman -S"
 abbr -a -- pacq "pacman -Q | grep"
 abbr -a -- pkgcnt "pacman -Q | wc -l"
