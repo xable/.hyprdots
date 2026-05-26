@@ -9,7 +9,7 @@ set -gx BAT_THEME Coldark-Dark
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -gx RHISK_COMM zenbu
-set -gx npm_config_prefix $HOME/.local
+set -gx npm_config_cache $HOME/.local
 set -gx PATH $HOME/.bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
 
@@ -66,16 +66,6 @@ abbr -a ga "git add"
 abbr -a gm "git commit -m"
 abbr -a gp "git push"
 abbr -a gap "git add -p"
-
-# FFF
-export FFF_GIT_CHANGES=1
-export FFF_FILE_ICON=1
-export FFF_LS_COLORS=1
-export FFF_COL1=4
-export FFF_COL2=0
-export FFF_COL3=3
-export FFF_COL4=8
-export FFF_COL5=7
 
 # ETC
 alias v='nvim'

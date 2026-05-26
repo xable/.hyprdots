@@ -3,12 +3,15 @@ return {
   "andymass/vim-matchup",
   "justinmk/vim-dirvish",
   { "folke/trouble.nvim", config = true },
-  { "phaazon/hop.nvim",
+  { "smoka7/hop.nvim",
     config = function()
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 },
 
   -- Interface
-  "nvim-tree/nvim-web-devicons"
+  "nvim-tree/nvim-web-devicons",
+
+  -- LSP config defaults (cmd, filetypes)
+  "neovim/nvim-lspconfig",
   }

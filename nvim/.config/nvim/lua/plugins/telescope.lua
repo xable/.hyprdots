@@ -1,25 +1,21 @@
-local function find(source)
-  return function()
-    require("telescope.builtin")[source]()
-  end
-end
-
 return {
-  "nvim-telescope/telescope.nvim",
-
-  dependencies = {
-    "nvim-lua/plenary.nvim",
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup({})
+    end,
   },
-
-  -- keys = {
-  --   { "<Leader>/", find("current_buffer_fuzzy_find"), desc = "Search" },
-  --   { "<Leader><Space>", find("buffers"), desc = "Buffers" },
-  --   { "<Leader>fa", find("autocommands"), desc = "Autocommands" },
-  --   { "<Leader>fc", find("commands"), desc = "Commands" },
-  --   { "<Leader>ff", find("find_files"), desc = "Files" },
-  --   { "<Leader>fg", find("live_grep"), desc = "Grep" },
-  --   { "<Leader>fh", find("help_tags"), desc = "Help" },
-  --   { "<Leader>fl", find("loclist"), desc = "Location list" },
-  --   { "<Leader>fq", find("quickfix"), desc = "Quickfix list" },
-  -- },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+    cond = function()
+      return vim.fn.executable("cmake") == 1
+    end,
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
+    dependencies = { "nvim-telescope/telescope.nvim" },
+  },
 }

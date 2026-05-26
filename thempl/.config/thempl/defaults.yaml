@@ -1,0 +1,80 @@
+name: "default"
+
+#FONTS
+fonts:
+  #JetBrainsMono Nerd Font
+  font1: "JetBrainsMono Nerd Font"
+  font2: "JetBrainsMono Nerd Font 12"
+
+#COLORS
+colors:
+  wmbf: "66767F"
+  wmbu: "273B47"
+
+  background: "#111E26"
+  foreground: "#92A0A7"
+  cursor: "#66767F"
+
+  black:
+    normal: "#16242D"
+    bold: "#273B47"
+  red:
+    normal: "#653436"
+    bold: "#804749"
+  green:
+    normal: "#4A724E"
+    bold: "#638F67"
+  yellow:
+    normal: "#654D47"
+    bold: "#7B5D56"
+  blue:
+    normal: "#33556A"
+    bold: "#467086"
+  magenta:
+    normal: "#3D3B6D"
+    bold: "#4A4683"
+  cyan:
+    normal: "#3B6B71"
+    bold: "#6E9EA5"
+  white:
+    normal: "#C6C6BA"
+    bold: "#DCDDCF"
+
+#UTILITY
+colornumbers:
+  black: 0
+  red: 1
+  green: 2
+  yellow: 3
+  blue: 4
+  magenta: 5
+  cyan: 6
+  white: 7
+
+#CONVENIENCE
+bgc: "{{ colors.background }}"
+fgc: "{{ colors.foreground }}"
+csc: "{{ colors.cursor }}"
+
+n_black: "{{ colors.black.normal }}"
+b_black: "{{ colors.black.bold }}"
+n_red: "{{ colors.red.normal }}"
+b_red: "{{ colors.red.bold }}"
+n_green: "{{ colors.green.normal }}"
+b_green: "{{ colors.green.bold }}"
+n_yellow: "{{ colors.yellow.normal }}"
+b_yellow: "{{ colors.yellow.bold }}"
+n_blue: "{{ colors.blue.normal }}"
+b_blue: "{{ colors.blue.bold }}"
+n_magenta: "{{ colors.magenta.normal }}"
+b_magenta: "{{ colors.magenta.bold }}"
+n_cyan: "{{ colors.cyan.normal }}"
+b_cyan: "{{ colors.cyan.bold }}"
+n_white: "{{ colors.white.normal }}"
+b_white: "{{ colors.white.bold }}"
+
+wmf: "{{ colors.wmbf }}"
+wmu: "{{ colors.wmbu }}"
+
+font1: "{{ fonts.font1 }}"
+font2: "{{ fonts.font2 }}"

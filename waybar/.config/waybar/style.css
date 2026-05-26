@@ -12,22 +12,30 @@ window#waybar {
   background-color: @background;
 }
 
-#power-profiles-daemon {
+#power-profiles-daemon,
+#workspaces,
+#window,
+#custom-weather,
+#tray,
+#network,
+#pulseaudio,
+#clock,
+#battery,
+#backlight {
   padding: 2px 15px;
-  margin: 5px 5px 5px 10px;
-  color: @color10;
   background-color: @color0;
   border: none;
   border-radius: 10px;
 }
 
+#power-profiles-daemon {
+  margin: 5px 5px 5px 10px;
+  color: @color10;
+}
+
 #workspaces {
-  padding: 2px 15px;
   margin: 5px;
   color: @color15;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 button {
@@ -56,47 +64,27 @@ button:hover {
 #workspaces button.urgent {}
 
 #window {
-  padding: 2px 15px;
   margin: 5px;
   color: @color14;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #custom-weather {
-  padding: 2px 15px;
   margin: 5px;
   color: @color15;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #tray {
-  padding: 2px 15px;
   margin: 5px;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #network {
-  padding: 2px 15px;
   margin: 5px;
   color: @color15;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #pulseaudio {
-  padding: 2px 15px;
   margin: 5px;
   color: @color12;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #pulseaudio.muted {
@@ -108,12 +96,8 @@ button:hover {
 }
 
 #clock {
-  padding: 2px 15px;
   margin: 5px;
   color: @color15;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #clock:hover {
@@ -121,12 +105,8 @@ button:hover {
 }
 
 #battery {
-  padding: 2px 15px;
   margin: 5px 10px 5px 5px;
   color: @color10;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 #battery:hover {
@@ -139,12 +119,8 @@ button:hover {
 }
 
 #backlight {
-  padding: 2px 15px;
   margin: 5px;
   color: @color15;
-  background-color: @color0;
-  border: none;
-  border-radius: 10px;
 }
 
 tooltip {

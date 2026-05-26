@@ -1,25 +1,27 @@
-local cmd = vim.cmd
-local map = vim.api.nvim_set_keymap
-local M = {}
+vim.g.mapleader = " "
 
--- map the leader key
-map('n', '<Space>', '', {})
-vim.g.mapleader = ' '
+local map = require("core.utils").map
 
-options = { noremap = true }
-map('n', '<leader><esc>', ':nohlsearch<cr>', options)
-map('n', '<leader><Right>', ':bnext<cr>', options)
-map('n', '<leader><Left>', ':bprev<cr>', options)
-map('n', '<leader>bc', ':BufferLinePickClose<cr>', options)
-map('n', '<F2>', ':w<cr>', options)
-map('n', '<F3>', ':wq<cr>', options)
+map("n", "<F2>", "<cmd>w<CR>")
+map("n", "<F3>", "<cmd>wq<CR>")
+map("n", "<leader>Q", "<cmd>qa<CR>")
+map("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>")
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
 
 -- hop.nvim
-map('n', '<leader>hw', ':HopWord<CR>', options)
-map('n', '<leader>hl', ':HopLine<CR>', options)
+map("n", "<leader>hw", ":HopWord<CR>", options)
+map("n", "<leader>hl", ":HopLine<CR>", options)
 
 -- Panes resizing
-map("n", '+', ':vertical resize +5<CR>', options)
-map("n", '_', ':vertical resize -5<CR>', options)
-map("n", '=', ':resize +5<CR>', options)
-map('n', '-', ':resize -5<CR>', options)
+map("n", "+", ":vertical resize +5<CR>", options)
+map("n", "_", ":vertical resize -5<CR>", options)
+map("n", "=", ":resize +5<CR>", options)
+map("n", "-", ":resize -5<CR>", options)
