@@ -22,6 +22,7 @@ body {
 .container {
   animation: fadeIn 0.5s ease-in-out;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -96,4 +97,35 @@ a:hover {
   color: var(--wht) !important;
   text-shadow: 0 0 5px var(--bwht), 0 0 10px var(--bwht);
   text-decoration: none;
+}
+
+.search-form {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-input {
+  background: transparent;
+  border: 1px solid var(--blu);
+  border-radius: 4px;
+  color: var(--wht);
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.2s ease-in-out;
+  width: 300px;
+}
+
+.search-input::placeholder {
+  color: var(--blu);
+}
+
+.search-input:hover {
+  border-color: var(--blu);
+}
+
+.search-input:focus {
+  background: color-mix(in srgb, var(--blu) 12%, transparent);
+  border-color: var(--blu);
 }

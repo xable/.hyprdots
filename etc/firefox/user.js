@@ -228,3 +228,4 @@ user_pref("browser.ai.control.pdfjsAltText", "blocked");
 user_pref("browser.ai.control.smartTabGroups", "blocked");
 user_pref("browser.tabs.groups.smart.enabled", false);
 user_pref("browser.urlbar.trustPanel.featureGate", false);
+user_pref("browser.newtabpage.enabled" false);

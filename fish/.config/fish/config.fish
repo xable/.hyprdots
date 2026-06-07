@@ -13,6 +13,26 @@ set -gx npm_config_cache $HOME/.local
 set -gx PATH $HOME/.bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
 
+# FZF (PatrickF1/fzf.fish)
+set -gx FZF_DEFAULT_OPTS "\
+--height 60% \
+--border \
+--layout=reverse \
+--info=inline \
+--bind 'ctrl-y:accept,ctrl-t:toggle-preview'"
+
+# Preview: bat for files, eza for directories
+set fzf_preview_file_cmd "bat --color=always --line-range :200"
+set fzf_preview_dir_cmd "eza --tree --color=always --icons {} | head -50"
+
+# fd: hidden files, exclude .git/node_modules/target
+set fzf_fd_opts --hidden --no-ignore --exclude=.git --exclude=node_modules --exclude=target
+
+# Diff highlighting with bat
+set fzf_diff_highlighter "bat --color=always --plain --language=diff"
+
+
+
 # kitty
 if test "$TERM" = xterm-kitty
     alias icat="kitty +kitten icat"
@@ -52,6 +72,7 @@ alias la='eza -al --color=always --group-directories-first --git --icons --no-us
 # Pacman
 abbr -a -- upd "yay -Syu"
 abbr -a -- pac "sudo pacman -S"
+abbr -a -- remove "sudo pacman -Rns"
 abbr -a -- pacq "pacman -Q | grep"
 abbr -a -- pkgcnt "pacman -Q | wc -l"
 
