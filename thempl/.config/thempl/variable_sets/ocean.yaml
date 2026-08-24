@@ -1,0 +1,36 @@
+# OCEAN
+name: "ocean"
+
+#COLORS
+colors:
+  wmbf: "FFCB6B"
+  wmbu: "0F111A"
+
+  background: "#0F111A"
+  foreground: "#A6ACCD"
+  cursor: "#FFCB6B"
+
+  black:
+    normal: "#151928"
+    bold: "#464B5D"
+  red:
+    normal: "#DC6068"
+    bold: "#F07178"
+  green:
+    normal: "#ABCF76"
+    bold: "#C3E88D"
+  yellow:
+    normal: "#E6B455"
+    bold: "#FFCB6B"
+  blue:
+    normal: "#6E98EB"
+    bold: "#82AAFF"
+  magenta:
+    normal: "#B480D6"
+    bold: "#C792EA"
+  cyan:
+    normal: "#71C6E7"
+    bold: "#89DDFF"
+  white:
+    normal: "#EEFFFF"
+    bold: "#FAFAFA"

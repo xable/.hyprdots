@@ -1,0 +1,36 @@
+# MODA
+name: "moda"
+
+#COLORS
+colors:
+  wmbf: "494A54"
+  wmbu: "24252F"
+
+  background: "#0F111A"
+  foreground: "#A6ACCD"
+  cursor: "#FFCB6B"
+
+  black:
+    normal: "#151928"
+    bold: "#464B5D"
+  red:
+    normal: "#FF5370"
+    bold: "#FF869A"
+  green:
+    normal: "#C3E88D"
+    bold: "#D8F5B1"
+  yellow:
+    normal: "#FFCB6B"
+    bold: "#FFDDAA"
+  blue:
+    normal: "#82AAFF"
+    bold: "#A7C5FF"
+  magenta:
+    normal: "#C792EA"
+    bold: "#D8B6F2"
+  cyan:
+    normal: "#89DDFF"
+    bold: "#A7E8FF"
+  white:
+    normal: "#A6ACCD"
+    bold: "#EEFFFF"

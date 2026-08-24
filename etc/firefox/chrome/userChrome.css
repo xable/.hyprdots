@@ -12,10 +12,10 @@
   --bg-ina: var(--bblk);
   --animation: var(--bred);
   --tab-font: "JetBrains Mono";
-  --tab-font-size 9pt;
+  --tab-font-size: 9pt;
   --url-font: "JetBrains Mono";
   --url-font-size: 9pt;
-  --arrowpanel-menuitem-margin: 0px 4px !important;
+  --panel-menuitem-margin: 0px 4px !important;
   --tab-min-height: 24px !important;
   --tab-block-margin: 3px !important;
   --urlbar-height: 22px !important;
@@ -27,16 +27,18 @@
   --toolbarbutton-border-radius: var(--button-border-radius);
   --button-border-radius: var(--border-radius-medium);
   --border-radius-medium: 5px !important;
-  --arrowpanel-border-radius: 5px !important;
-  --arrowpanel-menuitem-border-radius: 5px !important;
+  --panel-border-radius: 5px !important;
+  --panel-menuitem-border-radius: 5px !important;
+
   /* Left and right */
-  --arrowpanel-menuitem-padding-block: 4px !important;
+  --panel-menuitem-padding-block: 4px !important;
   --toolbar-field-focus-border-color: transparent !important;
   --panel-subview-body-padding: 4px 0 !important;
+
   /* Top and bottom */
-  --arrowpanel-menuitem-padding: 1px 1px !important;
-  --arrowpanel-menuitem-margin-inline: 1px !important;
-  --arrowpanel-menuitem-padding-block: 1px !important;
+  --panel-menuitem-padding: 1px 1px !important;
+  --panel-menuitem-margin-inline: 1px !important;
+  --panel-menuitem-padding-block: 1px !important;
   --panel-separator-margin-horizontal: 1px !important;
   --panel-subview-body-padding-block: 1px !important;
 }
@@ -61,11 +63,11 @@
 }
 
 .tabbrowser-tab:not(:hover) .close-icon {
-  opacity: 0 !important
+  opacity: 0 !important;
 }
 
 .tab-loading-burst[bursting]::before {
-  fill: var(--animation) !important
+  fill: var(--animation) !important;
 }
 
 #tabbrowser-tabs,
@@ -110,10 +112,12 @@
 }
 
 /* URL-BAR */
+
 #urlbar,
 .urlbar-background {
   background-color: var(--bg-body) !important;
   border: none !important;
+  outline: none !important;
   box-shadow: none !important;
   border-bottom: 0px !important;
   border-radius: 0px !important;
@@ -142,7 +146,7 @@
 #tabbrowser-tabpanels,
 browser[type=content-primary],
 browser[type=content]>html {
-  background: var(--bg-body) !important
+  background: var(--bg-body) !important;
 }
 
 .titlebar-spacer {
@@ -155,6 +159,7 @@ browser[type=content]>html {
 }
 
 /* Fixes size of box when you use a search shortcut and press escape. Uncomment if using above compact values. */
+
 #urlbar-search-mode-indicator {
   margin-top: 1px !important;
   margin-bottom: 1px !important;
@@ -166,6 +171,7 @@ browser[type=content]>html {
 }
 
 /* Navbar icons. */
+
 #nav-bar,
 #navigator-toolbox {
   border: none !important;
@@ -177,10 +183,25 @@ browser[type=content]>html {
   background: var(--bg-body) !important;
   font-family: var(--url-font) !important;
   font-size: var(--url-font-size) !important;
+}
+
+/*
+  IMPORTANT:
+  #navigator-toolbox must not have a fixed height.
+  It contains the tabs, navbar and bookmarks toolbar.
+*/
+
+#nav-bar {
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+
   --toolbar-start-end-padding: 6px !important;
   /* Navbar button edge padding */
+
   --toolbarbutton-outer-padding: 4px !important;
   /* Padding of the icons. */
+
   --toolbarbutton-inner-padding: 5px !important;
   /* Padding of the icons. */
 }
@@ -194,11 +215,14 @@ browser[type=content]>html {
 }
 
 /* Bookmarks bar. */
+
 #PersonalToolbar {
   padding-inline: 4px !important;
   /* Padding from the edges. */
+
   --bookmark-block-padding: 1px !important;
   /* How big the bookmarks on the bar are. */
+
   /* margin-top: -1px !important; */
   /* margin-bottom: -1px !important; */
 }
@@ -209,9 +233,11 @@ browser[type=content]>html {
 }
 
 /* Searchbar size fix */
+
 #search-container {
   min-height: 22px !important;
   /* Should be same as --urlbar-min-height */
+
   height: 22px !important;
   /* Should be same as --urlbar-min-height */
 }
@@ -220,7 +246,8 @@ browser[type=content]>html {
   padding-block: 3px !important;
 }
 
-/* Tab lebel masking. */
+/* Tab label masking. */
+
 .tabbrowser-tab {
   --tab-label-mask-size: 1em !important;
 }
@@ -239,17 +266,21 @@ browser[type=content]>html {
 }
 
 /*** Compact sound icon ***/
+
 /* Disables the text when audio is playing etc. */
+
 .tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]) {
   display: none !important;
 }
 
 /* Always show the favicon when sound is playing etc. */
+
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture])> :not(.tab-icon-overlay) {
   opacity: 1 !important;
 }
 
 /** Fallback when there's no favicon **/
+
 .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
   top: 0 !important;
   inset-inline-end: 0 !important;
@@ -257,17 +288,20 @@ browser[type=content]>html {
 }
 
 /** Tighten up drop-down/context/popup menu spacing **/
+
 menupopup>menuitem,
 menupopup>menu {
   padding-block: 0.2em !important;
 }
 
 /* Bookmarks menu padding */
+
 #BMB_bookmarksPopup .subviewbutton {
   padding: 0.2em !important;
 }
 
 /* Personal Toolbar menu padding */
+
 #PersonalToolbar {
   max-height: 3em !important;
 }
@@ -303,7 +337,7 @@ menupopup>menu {
 }
 
 #identity-icon {
-  margin-block: var(--urlbar-icon-padding)
+  margin-block: var(--urlbar-icon-padding);
 }
 
 .urlbarView>.search-one-offs:not([hidden]) {

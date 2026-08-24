@@ -1,7 +1,7 @@
 -- KEYBINDINGS
 local terminal = "kitty"
 local fileManager = "pcmanfm"
-local ipc = "qs -c noctalia-shell ipc call"
+local ipc = "noctalia msg "
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
@@ -9,17 +9,18 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " lockScreen lock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. "session lock"))
 hl.bind(mainMod .. " + TAB", hl.dsp.window.cycle_next())
 hl.bind("CTRL + ALT + R", hl.dsp.exec_cmd("reload-desktop"))
 hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("killall waybar && waybar"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprpicker -a"))
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("gtrans"))
-hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(ipc .. 'panel-toggle launcher "/tr $(wl-paste -n)"'))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
