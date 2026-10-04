@@ -1,7 +1,5 @@
 /*
-  Firefox Proton compact style
-  Sources:
-  https://github.com/Mrbigdog99/Proton-compact
+  Firefox Nova compact style
 */
 
 @import url('file:///home/user/.config/mozilla/colors.css');
@@ -9,12 +7,13 @@
 :root {
   --bg-body: var(--blk);
   --bg-tab: var(--red);
+  --bg-act: var(--blu);
   --bg-ina: var(--bblk);
   --animation: var(--bred);
   --tab-font: "JetBrains Mono";
-  --tab-font-size: 9pt;
+  --tab-font-size: 10pt;
   --url-font: "JetBrains Mono";
-  --url-font-size: 9pt;
+  --url-font-size: 10pt;
   --panel-menuitem-margin: 0px 4px !important;
   --tab-min-height: 24px !important;
   --tab-block-margin: 3px !important;
@@ -23,12 +22,13 @@
   --urlbar-min-height: 22px !important;
   --urlbar-icon-padding: 3px !important;
   --urlbar-container-padding: 0px !important;
-  --tab-border-radius: var(--toolbarbutton-border-radius);
-  --toolbarbutton-border-radius: var(--button-border-radius);
-  --button-border-radius: var(--border-radius-medium);
-  --border-radius-medium: 5px !important;
-  --panel-border-radius: 5px !important;
-  --panel-menuitem-border-radius: 5px !important;
+
+  --border-radius-xsmall: 1px !important;
+  --border-radius-small: 2px !important;
+  --border-radius-medium: 3px !important;
+  --border-radius-large: 4px !important;
+  --border-radius-xlarge: 6px !important;
+
 
   /* Left and right */
   --panel-menuitem-padding-block: 4px !important;
@@ -45,21 +45,16 @@
 
 .tabbrowser-tab {
   padding-inline: 1.5px !important;
-  /* Padding between tabs. 1 Compact */
 }
 
 #tabs-newtab-button {
   /* padding-inline-start: 1px !important; */
-  /* Padding between tabs and new tab button. Uncomment for Compact */
 }
 
 .tab-close-button {
   width: 20px !important;
-  /* 22 Normal */
   height: 20px !important;
-  /* 22 Normal */
   padding: 5px !important;
-  /* 6 Normal */
 }
 
 .tabbrowser-tab:not(:hover) .close-icon {
@@ -75,7 +70,7 @@
   background: var(--bg-body) !important;
 }
 
-.tab-background[selected="false"],
+.tab-background:not([selected]),
 .tabbrowser-tab {
   background: var(--bg-body) !important;
 }
@@ -97,6 +92,7 @@
 
 .browserContainer {
   background-color: var(--bg-body) !important;
+  border-width: 0 !important;
 }
 
 .tabbrowser-tab:hover .tab-background:not([selected]) {
@@ -123,10 +119,8 @@
   border-radius: 0px !important;
 }
 
-#urlbar[breakout][breakout-extend],
 #urlbar-background,
-#urlbar[breakout][breakout-extend]>#urlbar-input-container,
-#urlbar[breakout]>#urlbar-input-container {
+#urlbar-input-container {
   border: none !important;
   box-shadow: none !important;
 }
@@ -155,22 +149,7 @@ browser[type=content]>html {
 
 #urlbar-container {
   --urlbar-container-height: 26.00px !important;
-  /* Should be the same value as --urlbar-toolbar-height. */
 }
-
-/* Fixes size of box when you use a search shortcut and press escape. Uncomment if using above compact values. */
-
-#urlbar-search-mode-indicator {
-  margin-top: 1px !important;
-  margin-bottom: 1px !important;
-}
-
-#identity-icon-box {
-  margin-left: 1px !important;
-  /* Moves search icon 1 pixel to the right. */
-}
-
-/* Navbar icons. */
 
 #nav-bar,
 #navigator-toolbox {
@@ -185,25 +164,13 @@ browser[type=content]>html {
   font-size: var(--url-font-size) !important;
 }
 
-/*
-  IMPORTANT:
-  #navigator-toolbox must not have a fixed height.
-  It contains the tabs, navbar and bookmarks toolbar.
-*/
-
 #nav-bar {
   height: 30px !important;
   min-height: 30px !important;
   max-height: 30px !important;
-
   --toolbar-start-end-padding: 6px !important;
-  /* Navbar button edge padding */
-
   --toolbarbutton-outer-padding: 4px !important;
-  /* Padding of the icons. */
-
   --toolbarbutton-inner-padding: 5px !important;
-  /* Padding of the icons. */
 }
 
 #navigator-toolbox {
@@ -214,46 +181,27 @@ browser[type=content]>html {
   --lwt-tab-line-color: transparent !important;
 }
 
-/* Bookmarks bar. */
-
 #PersonalToolbar {
   padding-inline: 4px !important;
-  /* Padding from the edges. */
-
   --bookmark-block-padding: 1px !important;
-  /* How big the bookmarks on the bar are. */
-
-  /* margin-top: -1px !important; */
-  /* margin-bottom: -1px !important; */
 }
 
 #personal-bookmarks {
   /* margin-block: -1px; */
-  /* Reduces size of bookmark bar. Uncomment for Compact. */
 }
-
-/* Searchbar size fix */
 
 #search-container {
   min-height: 22px !important;
-  /* Should be same as --urlbar-min-height */
-
   height: 22px !important;
-  /* Should be same as --urlbar-min-height */
-}
-
-#search-container {
   padding-block: 3px !important;
 }
-
-/* Tab label masking. */
 
 .tabbrowser-tab {
   --tab-label-mask-size: 1em !important;
 }
 
-.tabbrowser-tab[visuallyselected=true]:hover,
-#tabbrowser-tabs:not([closebuttons=activetab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected=true]):hover {
+.tabbrowser-tab[visuallyselected]:hover,
+#tabbrowser-tabs:not([closebuttons=activetab])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:not([visuallyselected]):hover {
   --tab-label-mask-size: 1.3em !important;
 }
 
@@ -267,19 +215,13 @@ browser[type=content]>html {
 
 /*** Compact sound icon ***/
 
-/* Disables the text when audio is playing etc. */
-
 .tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]) {
   display: none !important;
 }
 
-/* Always show the favicon when sound is playing etc. */
-
 .tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture])> :not(.tab-icon-overlay) {
   opacity: 1 !important;
 }
-
-/** Fallback when there's no favicon **/
 
 .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
   top: 0 !important;
@@ -287,20 +229,14 @@ browser[type=content]>html {
   stroke: transparent !important;
 }
 
-/** Tighten up drop-down/context/popup menu spacing **/
-
 menupopup>menuitem,
 menupopup>menu {
   padding-block: 0.2em !important;
 }
 
-/* Bookmarks menu padding */
-
 #BMB_bookmarksPopup .subviewbutton {
   padding: 0.2em !important;
 }
-
-/* Personal Toolbar menu padding */
 
 #PersonalToolbar {
   max-height: 3em !important;
@@ -340,10 +276,48 @@ menupopup>menu {
   margin-block: var(--urlbar-icon-padding);
 }
 
-.urlbarView>.search-one-offs:not([hidden]) {
-  padding-block: 0px !important;
+.urlbar {
+  --toolbar-field-border-color-focus: none !important;
 }
 
-#urlbar-searchmode-switcher {
-  display: none !important;
+.urlbarView-background {
+  --urlbar-background-box-shadow-open: none !important;
+}
+
+:root {
+  --urlbar-container-padding-block: none !important;
+}
+
+.urlbarView-background {
+  background-color: var(--bg-body) !important;
+  margin: 10px !important;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+/*remove from history button*/
+.urlbarView-button {
+  background-color: var(--bg-body) !important;
+  fill: var(--text) !important;
+  border-radius: 0px !important;
+}
+
+.urlbarView-row:hover {
+  background-color: var(--bg-act) !important;
+}
+
+.urlbarView-row[selected] {
+  background-color: var(--bg-act) !important;
+}
+
+.urlbarView-button:hover {
+  background-color: var(--bg-act) !important;
+}
+
+.searchmode-switcher {
+  --button-background-color: var(--bg-body) !important;
+  --button-background-color-muted: var(--bg-body) !important;
+  --button-background-color-muted-hover: var(--bg-body) !important;
+  --button-background-color-muted-active: var(--bg-body) !important;
+  --button-background-color-muted-selected: var(--bg-body) !important;
 }

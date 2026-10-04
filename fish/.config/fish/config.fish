@@ -8,7 +8,6 @@ set -gx VISUAL nvim
 set -gx BAT_THEME Coldark-Dark
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -gx RHISK_COMM zenbu
 set -gx npm_config_cache $HOME/.local
 set -gx PATH $HOME/.bin $PATH
 set -gx PATH $HOME/.local/bin $PATH

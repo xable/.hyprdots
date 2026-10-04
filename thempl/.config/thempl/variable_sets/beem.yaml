@@ -1,0 +1,37 @@
+# BEEM
+name: "beem"
+
+# COLORS
+colors:
+  wmbf: "004852"
+  wmbu: "001C1F"
+
+  background: "#001C1F"
+  foreground: "#D4E1E8"
+  cursor: "#D4E1E8"
+
+  black:
+    normal: "#001C1F"
+    bold: "#004852"
+  red:
+    normal: "#D3464D"
+    bold: "#FF6670"
+  green:
+    normal: "#63B784"
+    bold: "#72E1A6"
+  yellow:
+    normal: "#F3B863"
+    bold: "#FFE08A"
+  blue:
+    normal: "#568CCF"
+    bold: "#5CAEFF"
+  magenta:
+    normal: "#8B66D6"
+    bold: "#B788FF"
+  cyan:
+    normal: "#4FB7AE"
+    bold: "#4DE3E3"
+  white:
+    normal: "#D4E1E8"
+    bold: "#F2F7F9"
+

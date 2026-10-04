@@ -1,0 +1,48 @@
+{
+  "dark": {
+    "mPrimary": "{{ n_blue }}",
+    "mOnPrimary": "{{ bgc }}",
+    "mSecondary": "{{ b_red }}",
+    "mOnSecondary": "{{ bgc }}",
+    "mTertiary": "{{ b_green }}",
+    "mOnTertiary": "{{ bgc }}",
+    "mError": "{{ n_red }}",
+    "mOnError": "{{ bgc }}",
+    "mSurface": "{{ bgc }}",
+    "mOnSurface": "{{ fgc }}",
+    "mSurfaceVariant": "{{ n_black }}",
+    "mOnSurfaceVariant": "{{ b_white }}",
+    "mOutline": "{{ csc }}",
+    "mShadow": "{{ n_black }}",
+    "mHover": "{{ b_green }}",
+    "mOnHover": "{{ bgc }}",
+    "terminal": {
+      "foreground": "{{ fgc }}",
+      "background": "{{ bgc }}",
+      "selectionFg": "#66767F",
+      "selectionBg": "#4B517A",
+      "cursorText": "#1F2335",
+      "cursor": "{{ csc }}",
+      "normal": {
+        "black": "{{ n_black }}",
+        "red": "{{ n_red }}",
+        "green": "{{ n_green }}",
+        "yellow": "{{ n_yellow }}",
+        "blue": "{{ n_blue }}",
+        "magenta": "{{ n_magenta }}",
+        "cyan": "{{ n_cyan }}",
+        "white": "{{ n_white }}"
+      },
+      "bright": {
+        "black": "{{ b_black }}",
+        "red": "{{ b_red }}",
+        "green": "{{ b_green }}",
+        "yellow": "{{ b_yellow }}",
+        "blue": "{{ b_blue }}",
+        "magenta": "{{ b_magenta }}",
+        "cyan": "{{ b_cyan }}",
+        "white": "{{ b_white }}"
+      }
+    }
+  }
+}
