@@ -14,4 +14,5 @@ newsboat/.newsboat/cache.db
 newsboat/.newsboat/history.cmdline
 newsboat/.newsboat/history.search
 btop/.config/btop/btop.log
+strata/.config/strata/tabs.toml
 packer_compiled.lua

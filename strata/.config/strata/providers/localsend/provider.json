@@ -1,0 +1,12 @@
+{
+  "category": "devices",
+  "command": [
+    "/usr/bin/python3",
+    "/home/maze/.config/strata/providers/localsend/provider.py"
+  ],
+  "icon": null,
+  "icons": {},
+  "id": "localsend",
+  "name": "LocalSend",
+  "version": 1
+}

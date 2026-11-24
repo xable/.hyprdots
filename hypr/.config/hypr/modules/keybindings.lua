@@ -1,6 +1,6 @@
 -- KEYBINDINGS
 local terminal = "kitty"
-local fileManager = "pcmanfm"
+local fileManager = "strata"
 local ipc = "noctalia msg "
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 

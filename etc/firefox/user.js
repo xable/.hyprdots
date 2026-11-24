@@ -232,4 +232,3 @@ user_pref("browser.urlbar.trustPanel.featureGate", false);
 user_pref("browser.newtabpage.enabled", false);
 user_pref("media.cache_readahead_limit", 3600);
 user_pref("media.cache_resume_threshold", 1800);
-user_pref("browser.compactmode.show", true);
